@@ -1,0 +1,1625 @@
+{
+	"info": {
+		"_postman_id": "99bbff48-9077-4977-ba77-53bf206d2c10",
+		"name": "Storage_Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41477909"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "AddProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productName",
+									"value": "ASUS gaming monitor 360HZ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Monitor gaming profesional",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "6813d71c5948a69980f35355",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "ASUS",
+									"type": "text"
+								},
+								{
+									"key": "offer",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "dateEntry",
+									"value": "2024-04-27",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/addProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "price",
+									"value": "400",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/productUpdate/6813d38aa39059226d3b4da4",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"productUpdate",
+								"6813d38aa39059226d3b4da4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/products",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInventaryControl",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/InventoryControl",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"InventoryControl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOutOfStockProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/OutOfStockProducts/",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"OutOfStockProducts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTopSellingProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/getTopSellingProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"getTopSellingProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/Monitor",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"Monitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Discount Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "discount",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "offerExpiryDate",
+									"value": "2025-04-01T00:00:00Z",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/addProductOffer/6813d38aa39059226d3b4da4",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"addProductOffer",
+								"6813d38aa39059226d3b4da4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/delete/68130a33c78c99a4ca51a857",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"delete",
+								"68130a33c78c99a4ca51a857"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Test",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "justification",
+									"value": "porque si :v XD",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/delete/6817f983940407b7acd15b0d",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"delete",
+								"6817f983940407b7acd15b0d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyCategoryAndDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "categoryId",
+									"value": "6813d71c5948a69980f35355",
+									"type": "text"
+								},
+								{
+									"key": "fechaInicio",
+									"value": "2025-05-01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/byCategoryAndDate",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"byCategoryAndDate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductsByCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/products/category/default",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"products",
+								"category",
+								"default"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"postman.setGlobalVariable(\"token\", data.token)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "jortigoza",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ta3CMdan@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"postman.setGlobalVariable(\"token\", data.token)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Juan",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Ortigoza",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jortigoza",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jortigoza@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ta3CMdan@",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/admin/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin Copy",
+			"item": [
+				{
+					"name": "Admin Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"postman.setGlobalVariable(\"token\", data.token)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "jortigoza",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234@MX#ghost",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Employee Register Test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Juan",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Ortigoza",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jorti",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jortigoza@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234@MX#ghost",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/employer/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"employer",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"postman.setGlobalVariable(\"token\", data.token)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "jorti",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234@MX#ghost",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/employer/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"employer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTopSellings Employee",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/employer/getTopSellingProducts/",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"employer",
+								"getTopSellingProducts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Name Product Employee",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/employer/product/monitor",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"employer",
+								"product",
+								"monitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Name Product Employee Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/employer/getProductsByCategory/monitor",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"employer",
+								"getProductsByCategory",
+								"monitor"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Provider",
+			"item": [
+				{
+					"name": "Register Provider",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nameProvider",
+									"value": "Asus S.A",
+									"type": "text"
+								},
+								{
+									"key": "NIT",
+									"value": "12388069",
+									"type": "text"
+								},
+								{
+									"key": "contactProvider",
+									"value": "Josue Noj",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "21315410",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "asusrog@latam.com",
+									"type": "text"
+								},
+								{
+									"key": "productsSupplied",
+									"value": "6813112b13ebf8e46f8b2f0f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/providers/addProvider",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"providers",
+								"addProvider"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Provider",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nameProvider",
+									"value": "Asus ROG",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/providers/updateProvider/6813101a7f317ea9220601ea",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"providers",
+								"updateProvider",
+								"6813101a7f317ea9220601ea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Provider",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nameProvider",
+									"value": "Asus ROG",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/providers/deleteProvider/6813101a7f317ea9220601ea",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"providers",
+								"deleteProvider",
+								"6813101a7f317ea9220601ea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All providers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nameProvider",
+									"value": "Asus S.A",
+									"type": "text"
+								},
+								{
+									"key": "NIT",
+									"value": "12388069",
+									"type": "text"
+								},
+								{
+									"key": "contactProvider",
+									"value": "Josue Noj",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "21315410",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "asusrog@latam.com",
+									"type": "text"
+								},
+								{
+									"key": "productsSupplied",
+									"value": "6813112b13ebf8e46f8b2f0f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/providers/providers",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"providers",
+								"providers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/providers/findByName/asus",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"providers",
+								"findByName",
+								"asus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Monitor",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "monitores",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/categories/add",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"categories",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/categories/Monitores",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"categories",
+								"Monitores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All Categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/categories/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"categories",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Electrónica",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Categoría para productos electrónicos",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/categories/6813d56f5948a69980f35332",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"categories",
+								"6813d56f5948a69980f35332"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/categories/6813d56f5948a69980f35332",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"categories",
+								"6813d56f5948a69980f35332"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Add Client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Luisa",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "45678902",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "luisgomz@email.com",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "15 avenida 4-55 zona 4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/clients/add",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"clients",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/clients/all",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"clients",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ByID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/clients/get/6813d8898aa3f5f022407eb8",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"clients",
+								"get",
+								"6813d8898aa3f5f022407eb8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Kenet",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "45678912",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "luisgomz@email.com",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "15 avenida 4-55 zona 4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/clients/update/6813d8898aa3f5f022407eb8",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"clients",
+								"update",
+								"6813d8898aa3f5f022407eb8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/clients/delete/6813d8898aa3f5f022407eb8",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"clients",
+								"delete",
+								"6813d8898aa3f5f022407eb8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movement",
+			"item": [
+				{
+					"name": "Register Movement",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productId",
+									"value": "6813d7355948a69980f35358",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "entry",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Ingresan 5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5500/v1/movements/registerMovement",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"movements",
+								"registerMovement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History of Movements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5500/v1/movements/history/6813d7355948a69980f35358",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"v1",
+								"movements",
+								"history",
+								"6813d7355948a69980f35358"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
