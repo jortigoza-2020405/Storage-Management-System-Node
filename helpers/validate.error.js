@@ -3,10 +3,15 @@ import { validationResult } from "express-validator"
 
 
 //Para cuando hay imágenes
-export const validateErrors = (req, res, next)=>{
+export const validateErrors = (req, res, next) => {
     const errors = validationResult(req)
-    if(!errors.isEmpty()){
-        return next(errors)
+    if (!errors.isEmpty()) {
+        
+        return res.status(400).send({
+            success: false,
+            message: 'Validation errors',
+            errors: errors.array()
+        })
     }
     next()
 }

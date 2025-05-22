@@ -3,7 +3,7 @@
 import { Router } from 'express'
 import {updateUser, deleteUser, updatePass, registerUser, loginUser, test } from './user.controller.js'
 import {  validateJwtEmployee } from '../../middlewares/validate.jwt.js'
-import { newPasswordValidation, registerValidatorEmployee} from '../../helpers/validators.js'
+import { newPasswordValidation, registerValidatorEmployer } from '../../helpers/validators.js'
 import { loginValidator } from '../../helpers/validators.js'
 import { deleteFileOnError } from '../../middlewares/delete.file.error.js'
 import { getTopSellingProducts, getProduct, getProductsByCategory } from '../product/product.controller.js'
@@ -17,7 +17,7 @@ api.get('/test', validateJwtEmployee, test)
 api.post(
     '/register', 
     [
-        //registerValidatorEmployee,  
+        registerValidatorEmployer,
         deleteFileOnError
     ], 
     registerUser

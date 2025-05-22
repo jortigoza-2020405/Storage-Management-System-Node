@@ -25,7 +25,6 @@ api.post(
     '/register', 
     [
         registerValidator,
-        deleteFileOnError
     ], 
     registerAdmin
 )

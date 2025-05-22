@@ -28,29 +28,38 @@ export const registerValidator = [
 ]
 
 
-export const registerValidatorEmployee = [        
+export const registerValidatorEmployer = [        
     body('name', 'Name cannot be empty')
         .notEmpty(),
+
     body('surname', 'Surname cannot be empty')
         .notEmpty(),
+
     body('email', 'Email cannot be empty or is not a valid email')
         .notEmpty()
         .isEmail()
         .custom(existEmailEmployee),
+
     body('username', 'Username cannot be empty')
         .notEmpty()
         .toLowerCase()
         .custom(existUsernameEmployee),
-    body('password', 'Password cannot be empty')
+
+    body('password')
         .notEmpty()
+        .withMessage('Password cannot be empty')
+        .isLength({ min: 6 })
+        .withMessage('Password must be at least 6 characters long')
         .isStrongPassword()
-        .withMessage('The password must be strong')
-        .isLength({min: 8}),
+        .withMessage('The password must be strong'),
+
     body('phone', 'Phone cannot be empty or is not a valid phone')
         .notEmpty()
         .isMobilePhone(),
+
     validateErrors
 ]
+
 
 export const loginValidator = [
     body('userLoggin', 'Username or email cannot be empty')
