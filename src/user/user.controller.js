@@ -49,7 +49,7 @@ export const loginUser = async(req, res)=>{
                 ]
             }
         )
-        if(User && await checkPassword(user.password, password)) {
+        if(user && await checkPassword(user.password, password)) {
             let loggedUser = {
                 uid: user._id,
                 name: user.name,

@@ -20,14 +20,14 @@ const api = Router()
 // Crear un producto (solo ADMIN)
 api.post(
     '/addProduct',
-    [validateJwt, isAdmin],
+    [validateJwt],
     addProduct
 )
 
 // Interracciones con productos
 api.get(
     '/getTopSellingProducts/',
-    [validateJwtEmployee],
+    [validateJwt],
     getTopSellingProducts
 )
 
@@ -101,11 +101,11 @@ api.get(
 )
 
 api.get('/product/:name', 
-    [validateJwtEmployee], 
+    [validateJwt], 
     getProduct
 )
 
-api.get('/getProductsByCategory/:name', [validateJwtEmployee], getProductsByCategory);
+api.get('/getProductsByCategory/:name', [validateJwt], getProductsByCategory);
 
 
 export default api
